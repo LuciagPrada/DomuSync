@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Colores de notas */
+    --note-purple: 270 30% 76%;
+    --note-teal: 170 30% 73%;
+    --note-green: 120 30% 75%;
+    --note-yellow: 60 30% 76%;
+    --note-orange: 20 30% 76%;
+    --note-white: 0 0% 100%;
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 210 40% 98%;
+    --card: 220 20% 13%;
+    --card-foreground: 210 40% 98%;
+    --popover: 220 20% 13%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 220 20% 9%;
+    --secondary: 220 20% 18%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 20% 18%;
+    --muted-foreground: 210 40% 70%;
+    --accent: 220 20% 18%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 210 40% 83.1%;
+    --chart-1: 220 50% 40%;
+    --chart-2: 160 40% 35%;
+    --chart-3: 30 50% 45%;
+    --chart-4: 280 45% 50%;
+    --chart-5: 340 55% 45%;
+    --sidebar-background: 220 20% 8%;
+    --sidebar-foreground: 210 40% 95.9%;
+    --sidebar-primary: 224.3 56.3% 38%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 12%;
+    --sidebar-accent-foreground: 210 40% 95.9%;
+    --sidebar-border: 220 20% 12%;
+    --sidebar-ring: 217.2 71.2% 49.8%;
+
+    /* Colores de notas en modo oscuro */
+    --note-purple: 270 20% 30%;
+    --note-teal: 170 20% 30%;
+    --note-green: 120 20% 30%;
+    --note-yellow: 60 20% 30%;
+    --note-orange: 20 20% 30%;
+    --note-white: 220 20% 15%;
+  }
+
+  /* Temas personalizados */
+  .theme-light {
+    --primary-green: 160 30% 30%;
+    --teal-green: 160 30% 85%;
+    --light-green: 160 30% 90%;
+    --cream: 40 30% 96%;
+  }
+
+  .theme-classic {
+    --primary-green: 160 30% 30%;
+    --teal-green: 160 30% 85%;
+    --light-green: 160 30% 90%;
+    --cream: 40 30% 96%;
+  }
+
+  .theme-dark {
+    --primary-green: 160 40% 30%;
+    --teal-green: 160 30% 20%;
+    --light-green: 160 30% 15%;
+    --cream: 220 20% 10%;
+  }
+
+  /* Estilos para accesibilidad */
+  .high-contrast {
+    --primary-green: 160 100% 25%;
+    --teal-green: 160 100% 80%;
+    --light-green: 160 100% 90%;
+    --foreground: 0 0% 0%;
+    --background: 0 0% 100%;
+  }
+
+  .high-contrast.dark {
+    --primary-green: 160 100% 50%;
+    --teal-green: 160 100% 30%;
+    --light-green: 160 100% 20%;
+    --foreground: 0 0% 100%;
+    --background: 0 0% 0%;
+  }
+
+  .reduce-motion * {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  [data-cursor="large"] * {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m3 3 7.07 16.97 2.51-7.39 7.39-2.51L3 3z'/%3E%3Cpath d='m13 13 6 6'/%3E%3C/svg%3E"),
+      auto;
+  }
+
+  [data-cursor="extra-large"] * {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m3 3 7.07 16.97 2.51-7.39 7.39-2.51L3 3z'/%3E%3Cpath d='m13 13 6 6'/%3E%3C/svg%3E"),
+      auto;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
